@@ -1,0 +1,5 @@
+1 . press 1 to know accout holder detail 
+2 . press 2 to withdraw money
+3 . press 3 to deposite money
+4 . press 4 to help
+5 . press 5 to exit

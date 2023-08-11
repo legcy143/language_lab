@@ -1,0 +1,7 @@
+*.class 
+*.exe
+*.c
+/session_series
+*.prob
+*.json
+*/node_modules
