@@ -1,7 +1,8 @@
 <!-- hello everyone -->
 <h1>hello everyone</h1> 
 
- it's me prince
-  and this repo is just for my quick revision and for learning purpose
+#script section need some change to run in your pc like:
+ > change the path 
+ > and must follow folder structure 
 
 

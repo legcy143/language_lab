@@ -21,15 +21,20 @@ abc.prototype.fullName = function(){
     console.log("full name "+this.userName)
 }
 
-
-console.log(Person.prototype)
-console.log(abc.prototype)
-console.log(String.fromCharCode)
-console.log(String.prototype)
-
 String.prototype.getName = function(){
     console.log("edit done "+this.String)
 }
 
 let a ="strPR"
-a.getName();
+// a.getName();
+
+let abcd = !!!!!!!10;
+// console.log(abcd)
+
+let arr = [1 , 2 , 3 , 4]
+let a2 = 23;
+if(a2 in [21 ,12, 23]){
+    console.log("is")
+}
+
+console.log([1 , 12 , 23].includes(a2))

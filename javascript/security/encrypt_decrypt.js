@@ -2,7 +2,7 @@ import  Jwt from "jsonwebtoken"
 console.time()
 console.log("har har mahadev")
 
-let a = "princeraj"
+let a = "legcytest"
 let secret_salt = "salt"
 let secret_code = "12"
 function encrypt(x){
