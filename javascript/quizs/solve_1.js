@@ -10,10 +10,10 @@ const sortarr = (arr) => {
             }
         }
     }
-    console.log(arr)
+    return arr;
 }
-sortarr(arrx)
-
+let ans1 = sortarr(arrx)
+console.log("ans 1 (sorting) => " , ans1)
 
 
 // answer 2 // change api route after each hit
@@ -44,10 +44,11 @@ const dublicate = (x) => {
             str = str + x.charAt(i)
         }
     }
-    console.log("output answer 3 => ", str)
-
+    return str;
+    
 }
-dublicate("pprriinnccee")
+let ans3 = dublicate("pprriinnccee")
+console.log("ans 3 => ", ans3)
 
 
 // answer 4 // reverse a name and then change it in there original state
@@ -96,7 +97,7 @@ let filteredArr = arr.filter((e) => {
     return e = e.name.includes(sValue)
 })
 
-console.log(filteredArr)
+console.log("ans 6 => ",filteredArr)
 
 
 // Answer 7 // remove _id and return object
@@ -110,4 +111,35 @@ dataArr = arr.map((e) => {
     let { _id, ...newObj } = e;
     return newObj
 })
-console.log(dataArr)
+console.log("ans 7 => ", dataArr)
+
+//ans 8 two sum problem
+//expected Output: [8,9,9,9,0,0,0,1]
+
+function sumOftwoList(l1 , l2) {
+    let itrate = l1.length >= l2.length ? l1.length : l2.length
+
+    let output = [];
+    let carry = 0;
+    
+    for (let i = 0; i < itrate || carry; i++) {
+        l1[i] = (l1[i] === undefined) ? 0 : l1[i]
+        l2[i] = (l2[i] === undefined) ? 0 : l2[i]
+        
+        let sum = l1[i] + l2[i] + carry;
+        carry = 0;
+        if (sum <= 9) {
+            output.push(sum)
+        }
+        else {
+            let lastVal = sum % 10;
+            carry += 1;
+            output.push(lastVal)
+        }
+    }
+    return output
+}
+
+let l1 = [9, 9, 9, 9, 9, 9, 9], l2 = [9, 9, 9, 9]
+let ans8  = sumOftwoList(l1 , l2)
+console.log("ans 8  => ", ans8)

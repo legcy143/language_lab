@@ -1,5 +1,6 @@
 
-***** >> list of deleted files from python << *****
+***** >> list of deleted files << *****
 
 
->> javaMethod.class
+>> abc.exe
+>> test.exe

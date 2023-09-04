@@ -1,7 +1,13 @@
 *.class 
 *.exe
 *.c
+*/.cph
 /session_series
 *.prob
 *.json
 */node_modules
+*.ignore.js
+*.ignore.cpp
+*.ignore.java
+*.ignore.c
+*.ignore.ts
