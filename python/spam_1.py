@@ -1,16 +1,16 @@
 import pyautogui
 import time
 
-txt = ["soja motay" , "priyanshu singh"]
+txt = ["har har mahadev" , "india❤️👑"]
 
 # how many times array print value
 
 t = 0
 while t < 15:
     for i in txt:
-        time.sleep(0.1)
+        time.sleep(2)
         pyautogui.write(i)
-        time.sleep(0.1)
+        time.sleep(2)
         pyautogui.press("Enter")
     t = t+1;
 

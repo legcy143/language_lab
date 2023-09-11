@@ -4,7 +4,7 @@
 */.cph
 /session_series
 *.prob
-*.json
+# *.json
 */node_modules
 *.ignore.js
 *.ignore.cpp
