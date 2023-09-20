@@ -1,11 +1,14 @@
 #include <iostream>
+
+int a = 567;
 namespace name
 {
     void call()
     {
-        std::cout << "hii there";
+        std::cout << "hii there "<<a;
     }
 }
+
 
 int main()
 {

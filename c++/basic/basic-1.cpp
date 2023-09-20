@@ -37,20 +37,21 @@ int main()
     // start
 
     // variable
-int marks = 0;
-cout <<"Enter your marks = ";
+    int marks = 0;
+    cout << "Enter your marks = ";
 
     // input
-cin >> marks;
+    cin >> marks;
 
     // logic
-if (marks >=33)
-{
-    cout <<"passed";
-}
-else{
-    cout <<"failed";
-}
+    if (marks >= 33)
+    {
+        cout << "passed";
+    }
+    else
+    {
+        cout << "failed";
+    }
     // end
 
     cout << "\n\n\n";

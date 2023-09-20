@@ -3,4 +3,7 @@
 
 
 >> abc.exe
->> test.exe
+>> main.exe
+>> basic-2.exe
+>> namespace.exe
+>> miniProjects.exe
