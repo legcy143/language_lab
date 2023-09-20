@@ -6,12 +6,13 @@ using namespace std;
 // -- local variable
 // -- static variable
 
+int c = 78; 
 
-int c = 78;
 int main()
 {
+    char a = 'A';
     // func();
-    cout << c;
+    cout << a+2;
 
     return 0;
 }
