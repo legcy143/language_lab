@@ -2,8 +2,14 @@
 ***** >> list of deleted files << *****
 
 
->> abc.exe
->> main.exe
->> basic-2.exe
->> namespace.exe
->> miniProjects.exe
+>> a.exe
+>> functions-2.exe
+>> rough.exe
+>> variable-2.exe
+>> class.exe
+>> micros.exe
+>> stl.exe
+>> class-exp.exe
+>> day-1.exe
+>> as_oop.exe
+>> d_oop_3.exe
