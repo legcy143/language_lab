@@ -10,9 +10,9 @@ int c = 78;
 
 int main()
 {
-    char a = 'A';
-    // func();
-    cout << a+2;
+    char ch = 'A';
+    const int num = 34;
 
+    cout<<num;
     return 0;
 }

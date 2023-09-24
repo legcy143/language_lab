@@ -1,6 +1,7 @@
 #include <iostream>
 
 int a = 567;
+
 namespace name
 {
     void call()
