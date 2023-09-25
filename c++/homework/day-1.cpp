@@ -6,9 +6,7 @@ int main()
     // taking marks and give them sum off all marks
     // let total marks in one subject be 100; so total marks 300;
     
-    int phy = 0;
-    int chem = 0;
-    int math = 0;
+    int phy = 0 , chem = 0 , math = 0;
 
     cout << "Enter your marks in math : ";
     cin >> math;

@@ -2,14 +2,11 @@
 ***** >> list of deleted files << *****
 
 
->> a.exe
->> functions-2.exe
->> rough.exe
+>> basic_2.exe
+>> namespace.exe
 >> variable-2.exe
->> class.exe
->> micros.exe
->> stl.exe
->> class-exp.exe
+>> pointer.exe
+>> linkedlist.exe
 >> day-1.exe
->> as_oop.exe
 >> d_oop_3.exe
+>> rough_2.exe
