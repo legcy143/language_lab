@@ -1,14 +1,12 @@
 #include <iostream>
+using namespace std;
 
 
 int main(){
-    int a = 56;
-    int b = 57;
-    char ab = 'A';
-    a = 70;
-// 
-    std::cout<<++a<<"\n";
-    std::cout<<a;
+    int box = 55;
+    int a = 45;
+    cout<<"roll number = "<<box<<endl;
+    cout<<a;
 
     return 0;
 }

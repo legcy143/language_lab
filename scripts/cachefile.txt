@@ -3,10 +3,8 @@
 
 
 >> basic_2.exe
->> namespace.exe
->> variable-2.exe
->> pointer.exe
->> linkedlist.exe
->> day-1.exe
->> d_oop_3.exe
->> rough_2.exe
+>> conditional_3.exe
+>> operator_3.exe
+>> string_3.exe
+>> micros.exe
+>> solve_3.exe

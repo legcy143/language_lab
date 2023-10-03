@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <bitset>
 
 //  types of variable
 // -- global varibale
@@ -8,11 +9,15 @@ using namespace std;
 
 int c = 78; 
 
+struct abc
+{
+    bitset<8> f1 , f2 , f3 , f4;
+
+};
+
+
 int main()
 {
-    char ch = 'A';
-    const int num = 34;
-
-    cout<<num;
+    cout<<sizeof(abc);
     return 0;
 }

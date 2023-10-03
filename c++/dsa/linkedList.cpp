@@ -12,7 +12,7 @@ public:
     }
 };
 
-void insertAtTail(Node *&head, int val)
+void insertAtTail(Node *&  , int val)
 {
     std::cout << "insert at tail";
 };
