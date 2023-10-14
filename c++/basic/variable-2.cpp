@@ -7,17 +7,22 @@ using namespace std;
 // -- local variable
 // -- static variable
 
-int c = 78; 
+int c = 78;
 
 struct abc
 {
-    bitset<8> f1 , f2 , f3 , f4;
-
+    bitset<8> f1, f2, f3, f4;
 };
-
 
 int main()
 {
-    cout<<sizeof(abc);
+    long int a1 = 12;
+    float a2 = 12.1;
+    double a3 = 12.1;
+    bool a4 = 1;
+    cout << sizeof(a1) << endl;
+    cout << sizeof(a2) << endl;
+    cout << sizeof(a3) << endl;
+    cout << sizeof(a4) << endl;
     return 0;
 }
