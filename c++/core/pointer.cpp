@@ -33,8 +33,30 @@ int main()
     // cout << &a3;
 
     // weard how const pointer char store this😢
+    //  ---as per my knwoledge  i think because of memory leakage we have not to use pointer of char without const other wise it affect any other memory in search of \o litreal --may be 🙂
     const char* myStr = "Hello, World!";
-    cout<<myStr;
+    // cout<<myStr;
+
+    // pointer of pointer 
+    int ptr1 = 10;
+    int ptr11 = 15;
+    int* ptr2 = &ptr1;
+    int** ptr3 = &ptr2;
+    // int ****** for pointer or pointer of pointer .. 
+    // cout<<ptr2<<"\n";
+    // cout<<ptr3<<"\n";
+    // cout<<**ptr3<<"\n";
+
+    // pointer variable change ?
+    cout<<ptr1<<endl;
+    (*ptr2)++;
+    cout<<ptr1<<endl;
+
+    cout<<ptr11<<endl;
+    ptr2 = &ptr11;
+    (*ptr2)++;
+    cout<<ptr11<<endl;
+    cout<<ptr1<<endl;
 
     return 0;
 }
