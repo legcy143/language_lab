@@ -2,9 +2,10 @@
 ***** >> list of deleted files << *****
 
 
->> basic_2.exe
->> conditional_3.exe
->> operator_3.exe
->> string_3.exe
->> micros.exe
->> solve_3.exe
+>> variable.exe
+>> variable-2.exe
+>> pointers.exe
+>> tempCodeRunnerFile.exe
+>> tit_1.exe
+>> pattern.exe
+>> array_1.exe
