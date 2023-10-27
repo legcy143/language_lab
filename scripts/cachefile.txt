@@ -2,10 +2,10 @@
 ***** >> list of deleted files << *****
 
 
->> variable.exe
->> variable-2.exe
->> pointers.exe
->> tempCodeRunnerFile.exe
->> tit_1.exe
->> pattern.exe
->> array_1.exe
+>> abc.exe
+>> javaMethod.class
+>> a.exe
+>> req_dsa.exe
+>> rough_3.exe
+>> doubly_linklist.exe
+>> singly_linkedlist.exe

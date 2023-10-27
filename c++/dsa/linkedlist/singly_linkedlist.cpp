@@ -8,7 +8,11 @@ public:
     Node(int value)
     {
         this->data = value;
-        this->next = NULL;
+        this->next = nullptr;
+    }
+    ~Node()
+    {
+        std::cout << "deleted \n";
     }
 };
 
@@ -69,27 +73,67 @@ void insertAt(int pos, int value, Node *&head, Node *&tail)
     headPtr->next = temp;
 }
 
-void removeOf()
+void removeFromPosition(int pos, Node *&head, Node *&tail)
 {
+    Node *curr = head;
+    if (pos == 1)
+    {
+        head = curr->next;
+        delete curr;
+        return;
+    }
+    Node *prev = nullptr;
+    int count = 1;
+    while (count < pos)
+    {
+        prev = curr;
+        curr = curr->next;
+        ++count;
+        // std::cout << prev << " " << curr << " \n";
+        if (curr == nullptr)
+        {
+            std::cout << "***  No data found at " << pos << " position ***\n";
+            return;
+        }
+    }
+    prev->next = curr->next;
+    if (curr->next == nullptr)
+    {
+        tail = prev;
+    }
+    curr->next = nullptr;
+    delete curr;
 }
 
 int main()
 {
 
-    std::cout << "har har mahadev  ~linkedlist\n";
+    std::cout << "har har mahadev  ~singly linkedlist\n";
     Node *node1 = new Node(12);
     Node *head = node1;
     Node *tail = node1;
     std::cout << head << " head and tail -" << tail << std::endl;
+
+    // insert at head
     insertAtHead(head, 15);
     insertAtHead(head, 16);
     insertAtHead(head, 17);
+
+    // insert at tail
     insertAtTail(tail, 20);
-    printAllNode(head);
-    std::cout << head << " head and tail -" << tail << std::endl;
+
+    // insert or add at postition
     insertAt(1, 51, head, tail);
     insertAt(2, 52, head, tail);
     insertAt(10, 53, head, tail);
+
+    // traverse to all node or display
+    printAllNode(head);
+
+    // remove 
+    removeFromPosition(5, head, tail);
+    removeFromPosition(15, head, tail);
+    removeFromPosition(7, head, tail);
     printAllNode(head);
     std::cout << head << " head and tail -" << tail << std::endl;
 

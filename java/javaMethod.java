@@ -7,9 +7,8 @@ public class javaMethod {
     static int abc = 12;
 
     public static void main(String[] args) {
-        myMethod();
-        char a = 'a';
-        System.out.println(abc);
-        System.out.println(a);
+        // myMethod();
+        int[] arr = new int[5];
+        System.out.println(arr.length);
     }
 }
