@@ -5,9 +5,9 @@ console.log("hii there today we gona learn varibale in javascript");
 
 var a1 = "var ."
 let a2 = "let . ";
-const a3 = "const ."
+const a3 = "const .";
 
-// redeclare variable in global scrope
+// redeclare variable in global scope
 var a1 = "rahhu" 
 // we can not redecale vcaribale with let and const
 // only var identifer (eg . a1) will redecale or updated
