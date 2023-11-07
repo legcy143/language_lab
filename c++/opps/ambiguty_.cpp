@@ -24,15 +24,15 @@ protected:
 //    virtual  string i = " -> i B";
 
 public:
-    show()
-    {
-        cout << "from B class " << this->i << endl;
-    }
+    // show()
+    // {
+    //     cout << "from B class " << this->i << endl;
+    // }
 };
 class C : public A, public B
 {
-// protected:
-//     string i = " -> i C";
+protected:
+    string i = " -> i C";
 
 public:
     show()
@@ -52,5 +52,5 @@ int main()
     // b1.show();
 
     C c1;
-    c1.show();
+    // c1.show();
 }

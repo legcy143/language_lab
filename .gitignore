@@ -6,7 +6,5 @@
 # *.json
 */node_modules
 *.ignore.js
-*.ignore.cpp
-*.ignore.java
-*.ignore.c
-*.ignore.ts
+!alive-git.java
+!alive-git.exe
