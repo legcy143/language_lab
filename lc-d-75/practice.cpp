@@ -1,22 +1,38 @@
 #include <iostream>
-#include <typeinfo>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    cout << " Har har mahadev day - 1 practice \n";
-    string word1 = "ab", word2 = "pqres", ans = "";
+    cout << " Har har mahadev day - 2 practice \n";
+    vector<int> nums = {2, 0, 1};
 
-    int w1 = word1.length(), w2 = word2.length();
-    int minSize = w1 > w2 ? w2 : w1;
-
-    for (int i = 0; i < minSize; i++)
+    for (int i = 0; i < nums.size(); i++)
     {
-        cout << word1[i] << " " << word2[i] << endl;
-        ans += word1[i] ;
-        ans += word2[i] ;
+        cout<<nums.at(i)<<endl;
+        if (nums.at(i) == 0)
+        {
+            nums.erase(nums.begin() + 0);
+            nums.push_back(2);
+        }
     }
-    ans += (w1>w2)?word1.substr(minSize , w1): word2.substr(minSize , w2);
-    // ans = (w1>w2)? ans+=word1.substr(minSize , w1): ans+=word2.substr(minSize , w2);
-    cout << "ans => " << ans;
+
+    // 2nd approch;
+    // for (int i = 0; i < nums.size(); i++)
+    // {
+    //     if (nums.at(i) == 0 && i < nums.size() - 1)
+    //     {
+    //         nums.at(i) = nums.at(i + 1);
+    //         nums.at(i) = 0;
+    //     }
+    // }
+
+    for (int i = 0; i < nums.size(); i++)
+    {
+        cout << nums.at(i) << " ";
+    }
+    cout << endl;
+    // printting
+
+    return 0;
 }

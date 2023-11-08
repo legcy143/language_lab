@@ -23,7 +23,6 @@ class Hero
 {
 
     int hp = 5;
-
 public:
     void udpateHp(int ep)
     {
@@ -42,14 +41,16 @@ public:
 int main()
 {
     cout << " ** har har mahadev  ** \n";
-    Hero h1;
-    Hero h2;
-    Hero h3;
-    h1.udpateHp(22);
-    h1.showHp();
-    h2.showHp();
-    h1.show();
-    h3.show();
+    // Hero h1;
+    // Hero h2;
+    // Hero h3;
+    // h1.udpateHp(22);
+    // h1.showHp();
+    // h2.showHp();
+    // h1.show();
+    // h3.show();
+    Hero Test;
+    Test.p;
 
     return 0;
 }
