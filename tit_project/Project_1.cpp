@@ -23,7 +23,7 @@ class TheorySubject
 {
 protected:
     string sub = "", subCode = "";
-    int theory = 0, midSem = 0, tQ = 0, earnedCredit = 0 , totalCredit = 0;
+    int theory = 0, midSem = 0, tQ = 0, earnedCredit = 0, totalCredit = 0;
     string theoryGrade = "F";
 
     void setTheoryGrade()
@@ -94,13 +94,13 @@ class PracticleSubject
 {
 protected:
     string sub = "", subCode = "";
-    int viva = 0, tw = 0, credit = 0;
+    int viva = 0, tw = 0, earnedCredit = 0 , totalCredit = 1;
     string PracticleGrade = "F";
 
     void setPracticleGrade()
     {
         int totalMarks = viva + tw;
-        if (totalMarks >= 21 && credit)
+        if (totalMarks >= 21 && earnedCredit)
         {
             if (totalMarks >= 46)
                 this->PracticleGrade = "A+";
@@ -128,13 +128,15 @@ protected:
         }
     }
 
+    public:
     // constructer
-    PracticleSubject(string sub, string subCode, int maxCredit = 1)
+    PracticleSubject(string sub, string subCode, int totalCredit = 1)
     {
         this->sub = sub;
         this->subCode = subCode;
-        this->credit = maxCredit;
-        cout << "Enter your marks in practicle exams formats \n";
+        this->totalCredit = totalCredit;
+        cout << "Enter your marks of " << this->sub << endl;
+        
 
         // getmarks(subject variable , subject name , max marks);
 
@@ -142,9 +144,14 @@ protected:
         getMarks(tw, "tw", 20);
         if (viva + tw >= 18)
         {
-            this->credit = maxCredit;
+            this->earnedCredit = totalCredit;
         }
         setPracticleGrade();
+    }
+     void showResult()
+    {
+        // TC = EC total credit and earned credit
+        cout << "subject: " << subCode << " TC/EC : " << totalCredit << "/" << earnedCredit << " Grade : " << PracticleGrade << endl;
     }
 };
 
@@ -157,23 +164,40 @@ int main()
 {
     cout << "\nProject - by Arjun sir November-2023 \n ***** Marks calculater *****\n";
 
+    // create student profile object
     Student stu("CSE");
-    TheorySubject eee("Energy & Environmental Engineering", "ES301[T]");
-    TheorySubject ds("Discrete Structure", "CS302[T]");
-    TheorySubject dsa("Data Structure", "CS303[T]");
-    TheorySubject dse("Digital Systems", "CS304[T]");
-    TheorySubject oopm("Object Oriented Programming & Methodology", "CS305[T]");
+
+    // theory subjects
+    TheorySubject eeeT("Energy & Environmental Engineering", "ES301[T]");
+    TheorySubject dsT("Discrete Structure", "CS302[T]");
+    TheorySubject dsaT("Data Structure", "CS303[T]");
+    TheorySubject dseT("Digital Systems", "CS304[T]");
+    TheorySubject oopmT("Object Oriented Programming & Methodology", "CS305[T]");
+
+    // practicle subjects
+    cout << "\n\n practicle marks :  \n";
+    PracticleSubject eeeP("Energy & Environmental Engineering", "ES301[P]");
+    PracticleSubject dsP("Discrete Structure", "CS302[P]");
+    PracticleSubject dsaP("Data Structure", "CS303[P]");
+    PracticleSubject dseP("Digital Systems", "CS304[P]");
+    PracticleSubject oopmP("Object Oriented Programming & Methodology", "CS305[P]");
 
     cout << "\n\n ***** Result *****\n\n";
     // student detail
-    cout <<"Name : " << stu.name<<"  Roll.no : " << stu.rollNo << "\n"
-         <<"Course :"<< stu.course<<"  Branch : "<<stu.branch<<"\n\n";
-        // marks
-        eee.showResult();
-    ds.showResult();
-    dsa.showResult();
-    dse.showResult();
-    oopm.showResult();
+    cout << "Name : " << stu.name << "  Roll.no : " << stu.rollNo << "\n"
+         << "Course :" << stu.course << "  Branch : " << stu.branch << "\n\n";
+    // marks
+    eeeT.showResult();
+    dsT.showResult();
+    dsaT.showResult();
+    dseT.showResult();
+    oopmT.showResult();
+
+    eeeP.showResult();
+    dsP.showResult();
+    dsaP.showResult();
+    dseP.showResult();
+    oopmP.showResult();
 
     cout << "\n\nTC = total credit , EC = earned credit";
     cout << "\n ***** Thank you *****\n\n";
