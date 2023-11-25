@@ -1,5 +1,6 @@
 #include <iostream>
 
+// converter using pointer 
 char toLowerCase(char *a)
 {
     if (*a + 1 >= 66 && *a + 1 <= 91)
@@ -14,6 +15,7 @@ char toUpperCase(char *a)
         *a = *a - 32;
     }
 }
+
 
 int main()
 {
