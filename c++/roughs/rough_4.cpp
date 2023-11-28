@@ -1,12 +1,18 @@
 #include <iostream>
 using namespace std;
 
+// int sum(argument){}
+
+int sum(int a, int b)
+{
+    int s = a + b;
+    // cout<<s;
+    return s;
+}
+
+
 int main()
 {
-    int a = 34;
-
-    // A - 34 33 34
-    // U - 34 34 34 
-    cout << a++ << " " << --a << " ";
-    cout << a;
+    int abc = sum(12, 12);
+    sum(12, 12);
 }
