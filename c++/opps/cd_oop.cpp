@@ -20,4 +20,3 @@ int main(){
     s1.show(23 , 23);
 }
 
-interactive-game-in-mumbai-for-festival-1.png

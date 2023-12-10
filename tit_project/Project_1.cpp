@@ -2,6 +2,13 @@
 #include <vector>
 using namespace std;
 
+/*
+ update :
+ -> make friend function for common function like get marks and others
+ -> store all object in vector and it help to create cgpa of student
+ -> make get cgpa function
+*/
+
 class Student
 {
 public:
@@ -94,7 +101,7 @@ class PracticleSubject
 {
 protected:
     string sub = "", subCode = "";
-    int viva = 0, tw = 0, earnedCredit = 0 , totalCredit = 1;
+    int viva = 0, tw = 0, earnedCredit = 0, totalCredit = 1;
     string PracticleGrade = "F";
 
     void setPracticleGrade()
@@ -128,7 +135,7 @@ protected:
         }
     }
 
-    public:
+public:
     // constructer
     PracticleSubject(string sub, string subCode, int totalCredit = 1)
     {
@@ -136,7 +143,6 @@ protected:
         this->subCode = subCode;
         this->totalCredit = totalCredit;
         cout << "Enter your marks of " << this->sub << endl;
-        
 
         // getmarks(subject variable , subject name , max marks);
 
@@ -148,7 +154,7 @@ protected:
         }
         setPracticleGrade();
     }
-     void showResult()
+    void showResult()
     {
         // TC = EC total credit and earned credit
         cout << "subject: " << subCode << " TC/EC : " << totalCredit << "/" << earnedCredit << " Grade : " << PracticleGrade << endl;
@@ -157,12 +163,13 @@ protected:
 
 int createCgpa()
 {
+    return -1;
     // code ............
 }
 
 int main()
 {
-    cout << "\nProject - by Arjun sir November-2023 \n ***** Marks calculater *****\n";
+    cout << "\nProject - by Arjun sir November-2023 \n ***** Marks & cgpa calculater *****\n";
 
     // create student profile object
     Student stu("CSE");
@@ -173,6 +180,7 @@ int main()
     TheorySubject dsaT("Data Structure", "CS303[T]");
     TheorySubject dseT("Digital Systems", "CS304[T]");
     TheorySubject oopmT("Object Oriented Programming & Methodology", "CS305[T]");
+    vector<TheorySubject> thSub = {eeeT, dsT, dsaT, dseT, oopmT};
 
     // practicle subjects
     cout << "\n\n practicle marks :  \n";
@@ -181,24 +189,27 @@ int main()
     PracticleSubject dsaP("Data Structure", "CS303[P]");
     PracticleSubject dseP("Digital Systems", "CS304[P]");
     PracticleSubject oopmP("Object Oriented Programming & Methodology", "CS305[P]");
+    vector<PracticleSubject> pSub = {eeeP, dsP, dsaP, dseP, oopmP};
+
+    // cgpa
+    int cgpa = createCgpa();
 
     cout << "\n\n ***** Result *****\n\n";
     // student detail
     cout << "Name : " << stu.name << "  Roll.no : " << stu.rollNo << "\n"
          << "Course :" << stu.course << "  Branch : " << stu.branch << "\n\n";
     // marks
-    eeeT.showResult();
-    dsT.showResult();
-    dsaT.showResult();
-    dseT.showResult();
-    oopmT.showResult();
+    for (int i = 0; i < thSub.size(); i++)
+    {
+        thSub[i].showResult();
+    }
 
-    eeeP.showResult();
-    dsP.showResult();
-    dsaP.showResult();
-    dseP.showResult();
-    oopmP.showResult();
+    for (int i = 0; i < pSub.size(); i++)
+    {
+        pSub[i].showResult();
+    }
 
-    cout << "\n\nTC = total credit , EC = earned credit";
+    cout << "\n   cgpa = " << cgpa << endl;
+    cout << "\nTC = total credit , EC = earned credit";
     cout << "\n ***** Thank you *****\n\n";
 }

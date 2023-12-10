@@ -1,18 +1,26 @@
 #include <iostream>
 using namespace std;
 
-// int sum(argument){}
-
-int sum(int a, int b)
-{
-    int s = a + b;
-    // cout<<s;
-    return s;
+int rec(int i){
+    static int countStatic = 0;
+    int countLocal = 0;
+    countStatic++;
+    countLocal++;
+    cout<<"\ncnts -> "<<countStatic<<" "<<countLocal;
+    if(i <= 0){
+        return 0;
+    }
+    cout<<"        i -> "<<i<<"  ";
+    int p = rec(i-2);
+    cout<<"\n        ->A  p "<<i<<" ";
+    int np = rec(i-1);
+    cout<<"\n        ->A np "<<i<<" ";
+    return max(p , np);
 }
 
 
 int main()
 {
-    int abc = sum(12, 12);
-    sum(12, 12);
+    int a = rec(4);
+    cout<<"\n Ans => "<<a;
 }
