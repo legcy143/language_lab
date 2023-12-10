@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 class Node
 {
 public:
@@ -106,6 +105,52 @@ void removeFromPosition(int pos, Node *&head, Node *&tail)
     delete curr;
 }
 
+void reverseLinkedList(Node *&head)
+{
+    Node *prevPtr = nullptr;
+    Node *currPtr = head;
+    Node *nextPtr = nullptr;
+
+    while (currPtr != nullptr)
+    {
+        nextPtr = currPtr->next;
+        currPtr->next = prevPtr;
+        prevPtr = currPtr;
+        currPtr = nextPtr;
+    }
+
+    head = prevPtr;
+};
+
+void reverseLinkedListAndSort(Node *&head)
+{
+    Node *sortedList = nullptr;
+    Node *curr = head;
+    while (curr != nullptr)
+    {
+        Node *nextNode = curr->next;
+        if (sortedList == nullptr || curr->data < sortedList->data)
+        {
+            curr->next = sortedList;
+            sortedList = curr;
+        }
+        else
+        {
+            Node *temp = sortedList;
+            while (temp->next != nullptr && temp->next->data < curr->data)
+            {
+                temp = temp->next;
+            }
+            curr->next = temp->next;
+            temp->next = curr;
+        }
+        curr = nextNode;
+    }
+    head = sortedList;
+}
+
+
+
 int main()
 {
 
@@ -131,12 +176,16 @@ int main()
     // traverse to all node or display
     printAllNode(head);
 
-    // remove 
+    // remove
     removeFromPosition(5, head, tail);
     removeFromPosition(15, head, tail);
     removeFromPosition(7, head, tail);
     printAllNode(head);
     std::cout << head << " head and tail -" << tail << std::endl;
+
+    std::cout << "Reversed linkedlist and sort\n";
+    reverseLinkedListAndSort(head);
+    printAllNode(head);
 
     // delete all node after finished program
     delete node1;
