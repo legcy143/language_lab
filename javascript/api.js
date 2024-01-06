@@ -9,7 +9,7 @@ const getData = async()=>{
     console.log(res.data)
 }
 // getData()
-
+           
 const client = new ApolloClient({
   uri: 'http://192.168.29.236:5000/graphql',
   cache: new InMemoryCache()
