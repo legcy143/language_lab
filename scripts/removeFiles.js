@@ -2,14 +2,14 @@ const fs = require("fs")
 const os = require("os")
 
 const username = os.userInfo().username;
-const folderPath = `C:/Users/${username}/.vscode/languge_lab/`
-const cacheFile = `C:/Users/${username}/.vscode/languge_lab/scripts/cachefile.txt`;
+const folderPath = `C:/Users/${username}/.vscode/language_lab/`
+const cacheFile = `C:/Users/${username}/.vscode/language_lab/scripts/cachefile.txt`;
 let DeletedFileList = ["\n***** >> list of deleted files << *****\n\n"];
 
-function checkAllFile(path) {
+async function checkAllFile(path) {
     fs.readdir(path, (err, files) => {
         if (err) {
-            return;
+            return -1;
         }
         files.forEach((e) => {
             if (e !== "javascript") {
@@ -30,7 +30,11 @@ function checkAllFile(path) {
     })
 }
 
-checkAllFile(folderPath)
-
+(async ()=>{
+    let a = await checkAllFile(folderPath)
+    console.log(a)
+    console.log("ending the program")
+}
+)()
 
 

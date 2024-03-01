@@ -1,8 +1,8 @@
 import os;
 
 username = os.getlogin();
-folder_path =f"C:/Users/{username}/.vscode/languge_lab/";
-cache_file = f"C:/Users/{username}/.vscode/languge_lab/scripts/cachefile.txt"
+folder_path =f"C:/Users/{username}/.vscode/language_lab/";
+cache_file = f"C:/Users/{username}/.vscode/language_lab/scripts/cachefile.txt"
 deleted_file_list = ["\n***** >> list of deleted files from python << *****\n\n"]
 
 

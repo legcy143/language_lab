@@ -2,16 +2,7 @@
 ***** >> list of deleted files << *****
 
 
->> alive-git.exe
->> test.exe
->> practice.exe
->> rough.exe
->> Project_1.exe
->> req_dsa.exe
->> rough.exe
->> sys-cmd.exe
->> ambiguty_.exe
->> cd_oop.exe
->> opp_1.exe
->> overload_oop.exe
->> rough_3.exe
+>> rough.class
+>> javaInputOutput.class
+>> javaMethod.class
+>> javaTutorial.class

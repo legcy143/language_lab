@@ -9,6 +9,6 @@ public class javaMethod {
     public static void main(String[] args) {
         // myMethod();
         int[] arr = new int[5];
-        System.out.println(arr.length);
+        System.out.println("length is : "+arr.length);
     }
 }

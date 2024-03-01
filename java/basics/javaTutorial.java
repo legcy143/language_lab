@@ -1,12 +1,15 @@
 public class javaTutorial {
     public static void main(String[] args) {
         System.out.println("\n ** har har mahadev ** \n");
+        
         int num1 = 112; // 4byte
         int num2 = 122; // 4byte
         String str = "prince";// 2 x n(char length)
         char ch = 'A'; // 2byte
         boolean bool = true; // 1bit
         float myFloat = 12.12f; // 4byte
+        System.out.println(ch+myFloat);
+        System.out.println(bool);
         System.out.println("printing variables => " + num1 + " " + num2 + " " + str);
 
         // Math function

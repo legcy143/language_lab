@@ -6,7 +6,6 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon ./index.js",
-    "lec_2": "nodemon ./lec_2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
