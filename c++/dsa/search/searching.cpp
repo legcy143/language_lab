@@ -16,33 +16,25 @@ int linearSearch(std::vector<int> vec, int target)
 
 int binarySearch(std::vector<int> vec, int target)
 {
-    // vector must be sorted for binary search ;
-
-    //
-
-    // std::cout<<"binary search \n";
-    int high = vec.size();
-    int low = 0;
-    int mid = (low + high) / 2;
-    // std::cout<<mid <<" "<<vec.size();
-    if (vec[mid] == target)
+    int start = 0, end = size - 1, mid;
+    while (start <= end)
     {
-        return mid;
-    }
-    else if (vec[mid] > target)
-    {
-        // negative
-        high = mid;
-        mid = (low + high) / 2;
-    }
-    else if (vec[mid] < target)
-    {
-        low = mid;
-        mid = (low + high) / 2;
+        mid = start + (end - start)/2;
+        if (arr[mid] == target)
+        {
+            return mid;
+        }
+        else if (arr[mid] > target)
+        {
+            end = mid - 1;
+        }
+        else
+        {
+            start = mid + 1;
+        }
     }
     return -1;
-};
-
+}
 int main()
 {
     std::cout << "har har mahadev  ~searching.cpp\n";
