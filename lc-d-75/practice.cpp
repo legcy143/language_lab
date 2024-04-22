@@ -114,36 +114,25 @@ Node *AddTwoNumber(Node *l1, Node *l2)
 {
     std::cout << "sum of two number \n";
     int carry = 0;
-    int sum = l1->val + l2->val + carry;
-    if (sum / 10)
-    {
-        carry = sum / 10;
-        sum = sum % 10;
-    }
-    Node *ansNode = new Node(sum);
+    int sum = 0;
+    Node *ansNode = new Node(0);
     Node *ansTailNode = ansNode;
-    l1 = l1->next;
-    l2 = l2->next;
 
-    while (l1 != nullptr || l2 != nullptr || carry != 0)
+    while (l1 || l2 || carry )
     {
-        std::string type = {(l1 != nullptr || l2 != nullptr || carry != 0) ? "True" : "False"};
+        std::string type = {(l1 != nullptr || l2 != nullptr) ? "True" : "False"};
         std::cout << type << " ";
-        sum = 0;
-        if (l1 != nullptr)
+        sum = carry;
+        carry = 0;
+        if (l1)
         {
             sum += l1->val;
             l1 = l1->next;
         }
-        if (l2 != nullptr)
+        if (l2)
         {
             sum += l2->val;
             l2 = l2->next;
-        }
-        if (carry != 0)
-        {
-            sum += carry;
-            carry = 0;
         }
         if (sum / 10)
         {
@@ -154,7 +143,8 @@ Node *AddTwoNumber(Node *l1, Node *l2)
         insertAtTail(ansTailNode, sum);
     }
     // printing for self satifaction
-    printAllNode(ansNode);
+    printAllNode(ansNode->next);
+    delete ansNode;
 }
 
 int main()
