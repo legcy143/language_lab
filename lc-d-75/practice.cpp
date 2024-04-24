@@ -1,30 +1,57 @@
 #include <iostream>
 #include <unordered_map>
-#include <unordered_set>
 using namespace std;
 
-int lengthOfLastWord(string s)
+// Example 1:
+// Input: s = "hello"
+// Output: "holle"
+
+// Example 2:
+// Input: s = "leetcode"
+// Output: "leotcede"
+
+string reverseVowels(string s)
 {
-    size_t end = s.find_last_not_of(" \t\n\r\f\v");
-    s = (end == std::string::npos) ? "" : s.substr(0, end + 1);
-    int ans = 0;
-    for (int i = s.length() - 1; i >= 0; i--)
+    int first = 0;
+    int last = s.length() - 1;
+
+    unordered_map<char, char> vowels = {
+        {'a', 'a'},
+        {'A', 'A'},
+        {'e', 'e'},
+        {'E', 'E'},
+        {'i', 'i'},
+        {'I', 'I'},
+        {'o', 'o'},
+        {'O', 'O'},
+        {'u', 'u'},
+        {'U', 'U'}};
+
+    while (first <= last)
     {
-        
-        if (s[i] == ' ')
+
+        while (first <= last && vowels.find(s[first]) == vowels.end())
         {
-            break;
+            first++;
         }
-        ans++;
+        while (first <= last && vowels.find(s[last]) == vowels.end())
+        {
+            last--;
+        }
+        if (vowels.find(s[first]) != vowels.end() && vowels.find(s[last]) != vowels.end())
+        {
+            swap(s[first], s[last]);
+        }
+        first++;
+        last--;
     }
- 
-    return ans;
+
+    return s;
 }
 
 int main()
 {
     std::cout << "har har mahadev \n";
-    std::cout << "\nans " << lengthOfLastWord("hello world"); // 3
-    std::cout << "\nans " << lengthOfLastWord(" hi lol  ");   // 1
+    std::cout << "\nans " << reverseVowels("laetcido"); // 1
     return 0;
 }
